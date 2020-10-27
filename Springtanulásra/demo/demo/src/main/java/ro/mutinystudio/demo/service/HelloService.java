@@ -1,0 +1,12 @@
+package ro.mutinystudio.demo.service;
+
+import java.util.List;
+
+import ro.mutinystudio.demo.messages.OsztalyMsg;
+
+public interface HelloService{
+
+	public List<OsztalyMsg> szamol();
+	
+	
+}

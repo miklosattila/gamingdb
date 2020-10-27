@@ -1,0 +1,59 @@
+package ro.mutinystudio.demo.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Terem {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+	
+	@Column
+	private String szam;
+	
+	@Column
+	private String szint;
+	
+//	@OneToOne
+//	@JoinColumn(name = "osztaly_id", referencedColumnName = "id")
+//	private Osztaly osztaly;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getSzam() {
+		return szam;
+	}
+
+	public void setSzam(String szam) {
+		this.szam = szam;
+	}
+
+	public String getSzint() {
+		return szint;
+	}
+
+	public void setSzint(String szint) {
+		this.szint = szint;
+	}
+
+	public Osztaly getOsztaly() {
+		return osztaly;
+	}
+
+	public void setOsztaly(Osztaly osztaly) {
+		this.osztaly = osztaly;
+	}
+	
+}
