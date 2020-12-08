@@ -1,0 +1,367 @@
+body{
+    background-image: url(../img/grey.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.overlay{
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0; /*a lecsuszo menu szelei: top,left*/
+    left: 0;
+    /*background-color: rgb(0,0,0);*/
+    background-color: rgba(52, 54, 54, 0.9);
+    overflow-x: hidden;
+    transition: 0.3s;
+}
+
+.overlay-content{
+    position: relative;
+    top: 5%;
+    width: 40%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a{
+    padding: 7px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #f0ecec;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus{
+    color: tomato;
+}
+
+.overlay .closeButton{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* a Categories lenyilo menu: */
+span{
+    font-size:35px;
+    cursor: pointer;
+    color: #f0ecec;
+    margin-left: 15%;
+}
+span:hover{
+    color: tomato;
+}
+
+.Header button{
+    margin-left: 25px;
+    width: 90%;
+    height: 50px;
+    background-color: tomato;
+    font-size:15px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #f0ecec;
+    border-radius: 5px;
+    border: 2px solid rgb(53, 52, 52);
+    text-align: center;
+}
+
+form.searchBar button{
+    width: 10%;
+}
+
+.Header button:hover{
+    color:black;
+}
+
+form.searchBar input[type=text]{
+    font-size: 25px;
+    border: 2px solid rgb(53, 52, 52);
+    border-radius: 5px;
+    width: 80%;
+    background: #e7e6e6f5;
+}
+
+
+.culum1{
+    margin-top: 75px;
+    margin-left: 20px;
+    margin-right: 5px;
+    width: 60%;
+    float: left;
+    border: 2px solid #f141418a;
+    background-color: rgb(53, 52, 52, 0.2);
+}
+
+h1, h2{
+    color: whitesmoke;
+}
+
+.culumn2{
+    margin-top: 75px;
+    margin-right: 20px;
+    margin-left: 5px;
+    width: 30%;
+    float: left;
+    border: 2px solid #f141418a;
+    background-color: rgb(53, 52, 52, 0.2);
+}
+
+.Header > div {
+	display: inline-block;
+    margin: 0 70px;    
+}
+
+.Header{
+    display: table-cell;
+    vertical-align: middle;
+    background-color: rgb(53, 52, 52, 0.8);
+    border: 2px solid #f141418a;
+    border-radius: 5px;
+}
+
+.logIn_button {
+    float: right;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* Login resz: */
+
+.modal input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+  
+/* Set a style for all buttons */
+.modal button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+  
+.modal button:hover {
+    opacity: 0.8;
+}
+  
+/* Extra styles for the cancel button */
+.modal .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* itt van a register button - itt kell majd a szint atallitsam !!!! */
+.modal .regbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #4CAF50;
+}
+  
+/* Center the image and position the close button */
+.modal .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+  
+.modal img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+  
+.modal .container {
+    padding: 16px;
+}
+  
+.modal span.psw {
+    float: right;
+    padding-top: 16px;
+}
+  
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+  
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+  
+/* The Close Button (x) */
+.modal .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+  
+.modal .close:hover,
+.modal .close:focus {
+    color: red;
+    cursor: pointer;
+}
+  
+/* Add Zoom Animation */
+.modal .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+  
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+  
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+span.psw {
+    display: block;
+    float: none;
+}
+.cancelbtn {
+   width: 100%;
+}
+}
+
+.modal .regbtn{
+    width: auto;
+    padding: 10px 18px;
+    background-color: #4CAF50;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* Register resz: */
+
+.reg_container {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: rgb(53, 52, 52, 0.8);
+    border: 2px solid #f141418a;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+
+.reg_container input{
+    width: 97%;
+    padding: 12px 20px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    background: #f1f1f1;
+}
+
+.reg_container input:focus{
+    background-color: rgb(179, 255, 185);
+    outline: none;
+}
+
+.reg_container hr{
+    border: 1px solid #f14141;
+    margin-bottom: 25px;
+}
+
+.reg_container .registerbtn{
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.reg_container .registerbtn:hover{
+    opacity: 1;
+}
+
+.reg_container a{
+    color: dodgerblue;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* forgot password resz: */
+
+.forgotPasswd_container{
+    margin-top: 25px;
+    padding: 20px;
+    background-color: rgb(53, 52, 52, 0.8);
+    border: 2px solid #f141418a;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+
+.forgotPasswd_container input{
+    width: 97%;
+    padding: 12px 20px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    background: #f1f1f1;
+}
+
+.forgotPasswd_container input:focus{
+    background-color: rgb(179, 255, 185);
+    outline: none;
+}
+
+.forgotPasswd_container hr{
+    border: 1px solid #f14141;
+    margin-bottom: 25px;
+}
+
+.forgotPasswd_container .passwdbtn{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 20px;
+}
+
+.forgotPasswd_container .passwdbtn:hover{
+    opacity: 1;
+}
