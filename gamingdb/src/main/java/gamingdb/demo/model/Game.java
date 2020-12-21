@@ -16,7 +16,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Games")
+@Table
 
 public class Game {
 	
@@ -24,20 +24,22 @@ public class Game {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
-	@Column(name="name")
+	@Column
 	private String name;
 	
-	@Column(name="genre")
+	@Column
 	private String genre;
-	
-	@Column(name="realse date")
+		
+	@Column
 	private String relaseDate;
 	
-	@OneToMany(mappedBy = "Publisher", cascade = CascadeType.ALL)
-	private Set<Publisher> publishers;
+	@ManyToOne
+	@JoinColumn(name = "publisher_id")
+	private Publisher publisher;
 	
-	@OneToMany(mappedBy = "Developer", cascade = CascadeType.ALL)
-	private Set<Developer> developers;
+	@ManyToOne
+	@JoinColumn(name = "developer_id")
+	private Developer developer;
 
 	public Long getId() {
 		return id;
@@ -71,20 +73,24 @@ public class Game {
 		this.relaseDate = relaseDate;
 	}
 
-	public Set<Publisher> getPublishers() {
-		return publishers;
+	public Publisher getPublisher() {
+		return publisher;
 	}
 
-	public void setPublishers(Set<Publisher> publishers) {
-		this.publishers = publishers;
+	public void setPublisher(Publisher publisher) {
+		this.publisher = publisher;
 	}
 
-	public Set<Developer> getDevelopers() {
-		return developers;
+	public Developer getDeveloper() {
+		return developer;
 	}
 
-	public void setDevelopers(Set<Developer> developers) {
-		this.developers = developers;
+	public void setDeveloper(Developer developer) {
+		this.developer = developer;
 	}
+
+	
+
+	
 	
 }

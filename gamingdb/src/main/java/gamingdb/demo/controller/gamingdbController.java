@@ -10,10 +10,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import gamingdb.demo.model.Developer;
+import gamingdb.demo.service.HelloService;
+
+
 
 @RestController
-
+@RequestMapping("/api/hello")
 public class gamingdbController {
+	
+	@Autowired
+	HelloService helloService;
 	
 	@RequestMapping("/")
 	public String index()
@@ -21,6 +28,12 @@ public class gamingdbController {
 		
 		return "index.html";
 	
+	}
+	@RequestMapping(method = RequestMethod.POST, path = "/test1", consumes = "application/json", produces = "application/json")
+	void test(@RequestBody Developer test) {
+
+		helloService.addnew(test);
+		// return "test called";
 	}
 
 }
