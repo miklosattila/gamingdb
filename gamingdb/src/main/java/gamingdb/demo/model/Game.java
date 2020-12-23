@@ -1,6 +1,8 @@
 package gamingdb.demo.model;
 
-import javax.persistence.Column;
+import java.util.Date;
+
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,7 +24,7 @@ public class Game {
 	private String genre;
 		
 	
-	private String relaseDate;
+	private Date relaseDate;
 	
 	@ManyToOne()
 	@JoinColumn(name = "publisher_id")
@@ -60,11 +62,11 @@ public class Game {
 		this.genre = genre;
 	}
 
-	public String getRelaseDate() {
+	public Date getRelaseDate() {
 		return relaseDate;
 	}
 
-	public void setRelaseDate(String relaseDate) {
+	public void setRelaseDate(Date relaseDate) {
 		this.relaseDate = relaseDate;
 	}
 
