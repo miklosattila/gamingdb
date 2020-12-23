@@ -1,11 +1,14 @@
 package gamingdb.demo.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+import javax.persistence.OneToMany;
 
 @Entity
 public class Developer {
@@ -16,22 +19,15 @@ public class Developer {
 	@Column
 	private String name;
 	
+
+	
+
 	public Long getId() {
 		return id;
 	}
 
-	public Developer() {
-		
-	}
-
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public Developer(Long id, String name) {
-		
-		this.id = id;
-		this.name = name;
 	}
 
 	public String getName() {
@@ -41,5 +37,11 @@ public class Developer {
 	public void setName(String name) {
 		this.name = name;
 	}
-}
 
+	private Developer() {
+		
+	}
+	
+	
+
+}
