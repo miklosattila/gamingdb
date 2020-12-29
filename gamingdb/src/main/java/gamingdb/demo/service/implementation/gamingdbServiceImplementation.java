@@ -40,9 +40,8 @@ public class gamingdbServiceImplementation  implements gamingdbService{
 	}
 	public List<Game> SearchbyPublisher(String publisher)
 	{
-		Publisher publis=publiRepo.findByName(publisher);
 		
-		return gameRepo.findAllByPublisher(publis);
+		return gameRepo.findAllByPublisherName(publisher);
 	}
 	public Publisher SearchforPublisher(String publisher)
 	{

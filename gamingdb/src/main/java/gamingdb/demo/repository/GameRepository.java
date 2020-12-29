@@ -19,7 +19,7 @@ public interface GameRepository extends CrudRepository<Game, Long> {
 
 	public List<Game> findAllByOrderByRelaseDateDesc();
 	
-	public List<Game> findAllByPublisher(Publisher publisher);
+	public List<Game> findAllByPublisherName(String publisher);
 
 	
 

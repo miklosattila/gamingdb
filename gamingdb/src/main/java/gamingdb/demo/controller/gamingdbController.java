@@ -9,8 +9,8 @@ public class gamingdbController {
 	
 	@RequestMapping("/")
 	public String games() {
-		return  "games";
-//
+		return  "index";
+
 	}
 
 }
