@@ -19,32 +19,32 @@ public class gamingdbRestController {
 	@Autowired
 	private gamingdbService helloService;
 	
-	@RequestMapping(method = RequestMethod.POST, path = "/test", consumes = "application/json", produces = "application/json")
+	@RequestMapping(method = RequestMethod.GET, path = "/test")
 	public List<Game> allGames()
 	{
 		return helloService.games();
 	}
 	
-	@RequestMapping(method = RequestMethod.POST, path = "/test/game/{game}", consumes = "application/json", produces = "application/json")
+	@RequestMapping(method = RequestMethod.GET, path = "/test/game/{game}")
 	public Game searchForGame(@PathVariable(value="game") String game ) {
 		return helloService.getSpecificgame(game);
 	}
 	
-	@RequestMapping(method = RequestMethod.POST, path = "/test/{genre}", consumes = "application/json", produces = "application/json")
+	@RequestMapping(method = RequestMethod.GET, path = "/test/{genre}")
 	public List<Game> searchForGenres(@PathVariable(value="genre") String genre )
 	{
 		return helloService.getGamesByGenres(genre);
 	}
-	@RequestMapping(method = RequestMethod.POST, path = "/test/recomandation", consumes = "application/json", produces = "application/json")
+	@RequestMapping(method = RequestMethod.GET, path = "/test/recomandation")
 	public List<Game> recomandedGames()
 	{
 		return helloService.recomanded();
 	}
-	@RequestMapping(method = RequestMethod.POST, path = "/test/publisher/{publisher}", consumes = "application/json", produces = "application/json")
+	@RequestMapping(method = RequestMethod.GET, path = "/test/publisher/{publisher}")
 	public List<Game> PublishersGames(@PathVariable(value="publisher") String publisher ){
 		return helloService.SearchbyPublisher(publisher);
 	}
-	@RequestMapping(method = RequestMethod.POST, path = "/test/publisher1/{publisher}", consumes = "application/json", produces = "application/json")
+	@RequestMapping(method = RequestMethod.GET, path = "/test/publisher1/{publisher}")
 	public Publisher Publishers(@PathVariable(value="publisher") String publisher ){
 		return helloService.SearchforPublisher(publisher);
 	}

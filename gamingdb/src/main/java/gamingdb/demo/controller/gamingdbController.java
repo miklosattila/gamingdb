@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class gamingdbController {
 	
 	@RequestMapping("/")
-	public String games(Model model) {
-		model.addAttribute("page","alma a fa alatt!");
+	public String games() {
 		return  "games";
 //
 	}
