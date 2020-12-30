@@ -29,9 +29,12 @@ public class gamingdbSecurityConf extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http
 			.authorizeRequests()
-				.antMatchers("/admin/**").hasRole("ADMIN")
-				.anyRequest().authenticated()
-				.and()
+			.antMatchers("/admin/**").hasRole("ADMIN")
+			.antMatchers("/registration").permitAll()
+			.antMatchers("/reg").permitAll()
+			.antMatchers("/activation/**").permitAll()
+			.anyRequest().authenticated()
+			.and()
 			.formLogin()
 				.loginPage("/login")
 				.permitAll()
