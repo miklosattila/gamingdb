@@ -21,9 +21,10 @@ public class gamingdbController {
 	private UserService userService;
 	@RequestMapping("/")
 	public String games() {
-		return  "index";
+		return  "homePage";
 
 	}
+	/*
 	@RequestMapping("/registration")
 	public String registration(Model model){
 		model.addAttribute("user", new User());
@@ -41,7 +42,7 @@ public class gamingdbController {
 		String result = userService.userActivation(code);
 		return "auth/login";
 	 }
-	 
+	 */
 
 }
 

@@ -1,0 +1,17 @@
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymleaf.org">
+
+
+<head>
+</head>
+
+<body>
+<div class="navbar-text navbar-right">
+				    Üdvözlünk <span sec:authentication="name">Anonymous </span>
+			           <form sec:authorize="isAuthenticated()" id="frmlogout" th:action="@{/logout}" method="post" class="form-inline">
+				    		| <a href="javascript:{}" onclick="document.getElementById('frmlogout').submit(); return false;">Kijelentkezés</a>
+				      </form>
+</body>
+
+</html>
