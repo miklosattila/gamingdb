@@ -29,6 +29,8 @@ public class gamingdbSecurityConf extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http
 			.authorizeRequests()
+			.antMatchers("/**").permitAll();
+			/*
 			.antMatchers("/admin/**").hasRole("ADMIN")
 			.antMatchers("/registration").permitAll()
 			.antMatchers("/reg").permitAll()
@@ -42,6 +44,7 @@ public class gamingdbSecurityConf extends WebSecurityConfigurerAdapter {
 			.logout()
 				.logoutSuccessUrl("/login?logout")
 				.permitAll();
+		*/
 	}	
 	
 

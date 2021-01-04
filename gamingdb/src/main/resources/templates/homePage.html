@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 
-<html xmlns:th="http://www.thymleaf.org">
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymleaf.org">
+
 
 <head>
 
@@ -11,6 +14,8 @@
 <link rel="stylesheet" type="text/css" href="/css/home.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script type="text/javascript" src="/js/home.js"></script>
+
+
 
 </head>
 
@@ -23,7 +28,7 @@
 	<!-- Button to close the overlay navigation -->
 	<a href="javascript:void(0)" class="closeButton" onclick="closeNav()">&times;</a>
 	<div class="overlay-content">
-		<a href="actionPage.html">Action</a>
+		<a href="actionPage">Action</a>
 		<a href="#">Sport</a>
 		<a href="#">Strategy</a>
 		<a href="#">Simulation</a>
@@ -39,7 +44,7 @@
 <div class="Header">
 			
 	<div>
-		<a href="homePage.html" id="homePage"><button id="home_button">GAMINGDb</button></a>
+		<a href="homePage" id="homePage"><button id="home_button">GAMINGDb</button></a>
 	</div>
 			
 	<div>
@@ -55,12 +60,13 @@
 	</div>
 
 	<div class="logIn_button">
-		<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+		<a href=login><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+		</a>
 	</div>
 </div>
 
 <!-- A login szerkezete: -->
-
+<!-- 
 <div id="id01" class="modal">
   
 	<form class="modal-content animate" action="homePage.html" method="post">
@@ -91,20 +97,68 @@
 		</div>
 	</form>
 </div>
+-->
 
-
-
+	
     <!-- Content -->
+	
     <div class="content">
-        <div class="culum1">
-            <h1>Recommended</h1>
+        <div id="c1" class="culum1">
+            <h1>Recomended</h1>
+        	<hr style="width:80%;margin-left:10%;height:1px;border-width:0;background-color:#f141418a">
+        	
+        	<table>
+        	
+        	<tr>
+    			
+    			<th><h3>FIFA 21</h3><img src="/img/fifa21.jpg" width="140" height="180"></th>
+    			<th>
+    			<hr style="width:80%;margin-left:10%;height:1px;border-width:0;background-color:#f141418a">
+    			<p>FIFA 21 is a football simulation video game published by Electronic Arts as part of the FIFA series.[1] It is the 28th installment in the FIFA series, and was released 9 October 2020 for Microsoft Windows, Nintendo Switch, PlayStation 4 and Xbox One. Enhanced versions for the PlayStation 5 and Xbox Series X and Series S were released on 3 December 2020, in addition to a version for Stadia.</p></th>
+  				<th>
+  				<iframe width="320" height="180" frameborder="0" allowfullscreen="allowfullscreen"
+				src="https://www.youtube.com/embed/Jmliox1trPQ?start=0"></iframe>
+				</th>
+  			</tr>
+  			
+  			<tr>
+    			<th><h3>Call of Duty: Warzone</h3><img src="/img/CODWarzone.jpg" width="140" height="180"></th>
+    			<th>
+    			<hr style="width:80%;margin-left:10%;height:1px;border-width:0;background-color:#f141418a">
+    			<p>Call of Duty: Warzone is a free-to-play battle royale video game released on March 10, 2020, for PlayStation 4, Xbox One, and Microsoft Windows. The game is a part of the 2019 title Call of Duty: Modern Warfare but does not require purchase of it and is introduced during Season 2 of Modern Warfare content.</p></th>
+    			<th>
+    			<iframe width="320" height="180" frameborder="0" allowfullscreen="allowfullscreen"
+				src="https://www.youtube.com/embed/0E44DClsX5Q"></iframe>
+    			</th>	
+  			</tr>
+  			
+  			<tr>
+    			<th><h3>Fortnite</h3><img src="/img/fortnite.jpg" width="140" height="180"></th>
+    			<th>
+    			<hr style="width:80%;margin-left:10%;height:1px;border-width:0;background-color:#f141418a">
+    			<p>Fortnite is an online video game developed by Epic Games and released in 2017.</p></th>
+    			<th>
+    			<iframe width="320" height="180" frameborder="0" allowfullscreen="allowfullscreen"
+				src="https://www.youtube.com/embed/2gUtfBmw86Y"></iframe>
+    			</th>	
+  			</tr>
+        	
+        	</table>
+        
         </div>
-        <div class="culumn2">
-            <h2>Top 5</h2>
-        </div>
+        
     </div>
 	
-
+	
+	<!--
+	<p>
+		game: <span id="nam"></span><br />
+		genre: <span id="gen"></span>
+	</p>
+	-->
+	
+	
+	
 </body>
 
 

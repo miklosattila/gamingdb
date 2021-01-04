@@ -92,12 +92,20 @@ form.searchBar input[type=text]{
 
 .culum1{
     margin-top: 75px;
-    margin-left: 20px;
+    margin-left: 25px;
     margin-right: 5px;
-    width: 60%;
+    width: 95%;
     float: left;
     border: 2px solid #f141418a;
     background-color: rgb(53, 52, 52, 0.2);
+}
+
+p{
+	color: whitesmoke;
+}
+
+h3{
+	color: #f141418a;
 }
 
 h1, h2{

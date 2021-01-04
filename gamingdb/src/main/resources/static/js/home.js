@@ -16,3 +16,14 @@ window.onclick = function(event) {
     	modal.style.display = "none";
     }
 }
+
+/*
+function getData(){
+		const response = await fetch('localhost:8091/api/hello/test/recomandation');
+		const data = await response.json();
+		const {name, genre} = data;
+		
+		document.getElementById(nam).textContent=name;
+		document.getElementById(gen).textContent=genre;
+}
+*/

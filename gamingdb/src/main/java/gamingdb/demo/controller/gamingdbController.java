@@ -24,7 +24,7 @@ public class gamingdbController {
 		return  "homePage";
 
 	}
-	/*
+	
 	@RequestMapping("/registration")
 	public String registration(Model model){
 		model.addAttribute("user", new User());
@@ -42,8 +42,24 @@ public class gamingdbController {
 		String result = userService.userActivation(code);
 		return "auth/login";
 	 }
-	 */
+	 
+	 @RequestMapping("/login")
+		public String login(Model model){
+			model.addAttribute("user", new User());
+			return "auth/login";
+	}
 
+	 @RequestMapping("/actionPage")
+		public String action(){
+			return "actionPage";
+	}
+	 
+	 @RequestMapping("/homePage")
+		public String gdbBTN(){
+			return "homePage";
+	}
+	 
+	 
 }
 
 

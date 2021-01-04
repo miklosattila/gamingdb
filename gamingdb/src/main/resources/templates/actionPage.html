@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
-<html xmlns:th="http://www.thymleaf.org>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymleaf.org">
 
 <head>
 
@@ -22,7 +24,7 @@
 	<!-- Button to close the overlay navigation -->
 	<a href="javascript:void(0)" class="closeButton" onclick="closeNav()">&times;</a>
 	<div class="overlay-content">
-		<a href="actionPage.html">Action</a>
+		<a href="actionPage">Action</a>
 		<a href="#">Sport</a>
 		<a href="#">Strategy</a>
 		<a href="#">Simulation</a>
@@ -54,12 +56,13 @@
 	</div>
 
 	<div class="logIn_button">
-		<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+		<a href=login><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+		</a>
 	</div>
 </div>
 
 <!-- A login szerkezete: -->
-
+<!-- 
 <div id="id01" class="modal">
   
 	<form class="modal-content animate" action="homePage.html" method="post">
@@ -90,7 +93,7 @@
 		</div>
 	</form>
 </div>
-
+-->
 </body>
 
 </html>
